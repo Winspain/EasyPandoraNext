@@ -15,6 +15,7 @@ def job():
 
         user_info_env = os.environ.get('USER_INFO')
         unique_name = os.environ.get('UNIQUE_NAME')
+        pool_token = os.environ.get('POOL_TOKEN')
         expires_in = 0
         user_info_list = user_info_env.split(',')
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -36,7 +37,7 @@ def job():
             share_token_list.append(share_response.json()['token_key'])
             logging.info(f'Response for {unique_name}: {share_response.text}')
 
-        pool_payload = f'share_tokens={share_token_list[0]}%0A{share_token_list[1]}&pool_token={}'
+        pool_payload = f'share_tokens={share_token_list[0]}%0A{share_token_list[1]}&pool_token={pool_token}'
         pool_response = requests.request('POST', pool_url, headers=headers, data=pool_payload)
         logging.info(f'Pool Response: {pool_response.text}')
         logging.info('Script executed successfully.')
@@ -47,10 +48,17 @@ def job():
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
     schedule.every(12).days.at('03:00').do(job)
     logging.info('Script starts.')
+    start_time = time.time()
+
     while True:
+        current_time = time.time()
+        elapsed_time = current_time - start_time
+        if elapsed_time % 60 < 1:
+            start_time = current_time
+            logging.info('程序正常运行,当前时间: %s', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
+
         schedule.run_pending()
         time.sleep(1)
     # job()
