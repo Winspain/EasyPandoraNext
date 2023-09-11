@@ -25,7 +25,7 @@ git clone https://github.com/Winspain/Next-Web-Pandora.git
 ## Usage example
 ```sh
 htpasswd -c /root/Next-Web-Pandora/passwd '输入任意账号名'
-mv docker-compose-example.yaml docker-compose.yaml
+mv docker-compose-example.yml docker-compose.yaml
 docker build -t refresh-pool-token .
 ```
 
