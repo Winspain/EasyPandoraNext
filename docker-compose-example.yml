@@ -32,6 +32,7 @@ services:
     image: refresh-pool-token
     container_name: refresh-pool-token
     environment:
+      - TZ=Asia/Shanghai
       - UNIQUE_NAME=
       - USER_INFO=
       - POOL_TOKEN=
