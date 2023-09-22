@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag refresh-pool-token:v0.0.1
+      run: docker build . --file Dockerfile --tag refresh-pool-token:latest

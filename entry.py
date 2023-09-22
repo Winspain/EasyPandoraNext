@@ -27,7 +27,8 @@ def job():
                 'username': username_passwd[0],
                 'password': username_passwd[1]
             }
-            access_token = requests.post(auth_url, headers=headers, data=urlencode(access_token_payload)).json()['access_token']
+            access_token = requests.post(auth_url, headers=headers, data=urlencode(access_token_payload)).json()[
+                'access_token']
             access_token_list.append(access_token)
 
         share_token_list: list = []
@@ -37,7 +38,9 @@ def job():
             share_token_list.append(share_response.json()['token_key'])
             logging.info(f'Response for {unique_name}: {share_response.text}')
 
-        pool_payload = f'share_tokens={share_token_list[0]}%0A{share_token_list[1]}&pool_token={pool_token}'
+        # pool_payload = f'share_tokens={share_token_list[0]}%0A{share_token_list[1]}&pool_token={pool_token}'
+        share_token_list_str = '%0A'.join([share_token for share_token in share_token_list])
+        pool_payload = f'share_tokens={share_token_list_str}&pool_token={pool_token}'
         pool_response = requests.request('POST', pool_url, headers=headers, data=pool_payload)
         logging.info(f'Pool Response: {pool_response.text}')
         logging.info('Script executed successfully.')
