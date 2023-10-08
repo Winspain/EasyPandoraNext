@@ -38,7 +38,6 @@ def job():
             share_token_list.append(share_response.json()['token_key'])
             logging.info(f'Response for {unique_name}: {share_response.text}')
 
-        # pool_payload = f'share_tokens={share_token_list[0]}%0A{share_token_list[1]}&pool_token={pool_token}'
         share_token_list_str = '%0A'.join([share_token for share_token in share_token_list])
         pool_payload = f'share_tokens={share_token_list_str}&pool_token={pool_token}'
         pool_response = requests.request('POST', pool_url, headers=headers, data=pool_payload)
@@ -54,14 +53,17 @@ if __name__ == '__main__':
     schedule.every(12).days.at('03:00').do(job)
     logging.info('Script starts.')
     start_time = time.time()
-
+    tickcounts = 0
+    logging.info('程序正常运行,当前时间: %s', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
     while True:
         current_time = time.time()
         elapsed_time = current_time - start_time
         if elapsed_time % 60 < 1:
             start_time = current_time
+            tickcounts = tickcounts+1
+        if tickcounts > 60*24:
+            tickcounts = 0
             logging.info('程序正常运行,当前时间: %s', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
-
         schedule.run_pending()
         time.sleep(1)
     # job()
