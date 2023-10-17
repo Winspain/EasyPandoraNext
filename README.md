@@ -27,7 +27,9 @@ git clone https://github.com/Winspain/Next-Web-Pandora.git
 htpasswd -c /root/Next-Web-Pandora/passwd '输入任意账号名'
 mv docker-compose-example.yml docker-compose.yaml
 docker build -t refresh-pool-token .
+docker-compose up -d
 ```
+- 当前需提前获取pool_token并填入docker-compose.yaml
 
 ## docker-compose
 ### chatgpt-next-web
@@ -40,3 +42,7 @@ docker build -t refresh-pool-token .
 - UNIQUE_NAME:建议填入和CODE相同的值
 - USER_INFO:openAI账号密码,格式为xxxx@gmail.com:yourpassword,yyyy@gmail.com:yourpassword
 - POOL_TOKEN:pandora项目生成的pool token
+
+### TODO
+- [ ] 续期成功发送钉钉通知
+- [ ] 自动生成pool_token，实现开箱即可用
