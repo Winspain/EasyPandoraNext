@@ -48,6 +48,7 @@ def job():
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    job()  # 启动时执行一次
     schedule.every(12).days.at('03:00').do(job)
     logging.info('Script starts.')
     start_time = time.time()
@@ -55,10 +56,9 @@ if __name__ == '__main__':
     while True:
         current_time = time.time()
         elapsed_time = current_time - start_time
-        if elapsed_time % 60 < 1:
+        if elapsed_time % (60 * 60) < 1:
             start_time = current_time
             logging.info('程序正常运行,当前时间: %s', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
 
         schedule.run_pending()
         time.sleep(1)
-    # job()
