@@ -6,7 +6,7 @@
 ![Pandora](https://img.shields.io/badge/Pandora-8A2BE2)
 
 
-- 快速部署nginx+ChatGPT-Next-Web+Pandora
+- 快速部署Nginx+ChatGPT-Next-Web+Pandora
 
 - 使用Pandora的pool，来满足多账户并发
 
@@ -39,4 +39,4 @@ docker build -t refresh-pool-token .
 ### refresh-pool-token
 - UNIQUE_NAME:建议填入和CODE相同的值
 - USER_INFO:openAI账号密码,格式为xxxx@gmail.com:yourpassword,yyyy@gmail.com:yourpassword
-- POOL_TOKEN
+- POOL_TOKEN:pandora项目生成的pool token
