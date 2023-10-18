@@ -37,7 +37,8 @@ def job():
             share_token_list.append(share_response.json()['token_key'])
             logging.info(f'Response for {unique_name}: {share_response.text}')
 
-        pool_payload = f'share_tokens={share_token_list[0]}%0A{share_token_list[1]}&pool_token={pool_token}'
+        share_token_str = '%0A'.join(share_token_list)
+        pool_payload = f'share_tokens={share_token_str}&pool_token={pool_token}'
         pool_response = requests.request('POST', pool_url, headers=headers, data=pool_payload)
         logging.info(f'Pool Response: {pool_response.text}')
         logging.info('Script executed successfully.')
