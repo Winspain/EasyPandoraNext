@@ -50,7 +50,7 @@ def job():
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     job()  # 启动时执行一次
-    schedule.every(12).days.at('03:00').do(job)
+    schedule.every(1).days.at('03:00').do(job)
     logging.info('Script starts.')
     start_time = time.time()
 
