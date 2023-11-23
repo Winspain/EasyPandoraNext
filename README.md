@@ -1,5 +1,5 @@
-# Next-Web-Pandora
-> 一个结合了ChatGPT-Next-Web和Pandora的项目.
+# EasyPandoraNext
+> 一个让你易于使用docker部署PandoraNext的项目.
 
 ![Python version](https://img.shields.io/badge/Python-3.11-blue)
 ![ChatGPT-Next-Web](https://img.shields.io/badge/ChatGPT--Next--Web-8A2BE2)
