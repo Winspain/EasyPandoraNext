@@ -1,5 +1,4 @@
-version: "3"
-
+version: '3'
 services:
   nginx:
     image: nginx:latest
@@ -8,32 +7,22 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./passwd:/etc/nginx/htpasswd
     environment:
       - TZ=Asia/Shanghai
 
     depends_on:
-      - chatgpt-next-web
-      - refresh-pool-token
+      - pandoraNext
 
-  chatgpt-next-web:
-    image: yidadaa/chatgpt-next-web
-    container_name: chatgpt-next-web
+  pandoraNext:
+    image: pengzhile/pandora-next
+    container_name: PandoraNext
+    restart: always
     expose:
-      - "3000"
-    environment:
-      - CODE=
-      - TZ=Asia/Shanghai
-      - OPENAI_API_KEY=
-      - BASE_URL=https://ai.fakeopen.com
-      - HIDE_USER_API_KEY=1
-
-  refresh-pool-token:
-    image: refresh-pool-token
-    container_name: refresh-pool-token
+      - "8181"
+    ports:
+      - "8181:8181"
+    volumes:
+      - ./data:/data
     environment:
       - TZ=Asia/Shanghai
-      - UNIQUE_NAME=
-      - USER_INFO=
-      - POOL_TOKEN=
-
+      - PANDORA_NEXT_LICENSE=
