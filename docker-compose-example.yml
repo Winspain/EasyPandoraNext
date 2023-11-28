@@ -25,4 +25,3 @@ services:
       - ./data:/data
     environment:
       - TZ=Asia/Shanghai
-      - PANDORA_NEXT_LICENSE=
