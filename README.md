@@ -26,9 +26,9 @@ git clone https://github.com/Winspain/Next-Web-Pandora.git
 
 ## Usage example
 
-- 获取[license_id](https://dash.pandoranext.com/)填写在data/config.json中
-- 按需在/data/config.json文件中设置site_password
-- 按需在tokens.json中设置内置账号
+- (必做) 获取[license_id](https://dash.pandoranext.com/)填写在data/config.json中
+- (可选) 建议在/data/config.json文件中设置site_password
+- (可选) tokens.json中设置内置账号
 
 ```sh
 mv docker-compose-example.yml docker-compose.yaml
