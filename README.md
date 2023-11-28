@@ -1,6 +1,6 @@
 # EasyPandoraNext
 
-> 一个小白也能使用docker快速部署PandoraNext的项目.
+> 仅需两步！🚀小白也能使用docker快速部署PandoraNext🚀
 
 ![PandoraNext](https://img.shields.io/badge/Nginx-PandoraNext-blue)
 ![docker](https://img.shields.io/badge/docker--compose-8A2BE2)
