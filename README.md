@@ -11,7 +11,6 @@
 如需获取token或session，可点击 [fakeopen](https://ai.fakeopen.com/auth)
 - 快速部署Nginx+PandoraNext
 - 挂载宿主机data目录
-- 挂载宿主机data目录
 
 ## Installation
 
