@@ -57,4 +57,5 @@ docker-compose up -d
 
 ### TODO
 
-- [ ] 暂无
+- [ ] 使用watchtower监控pandora版本变化
+- [ ] 版本变化时，使用钉钉通知
