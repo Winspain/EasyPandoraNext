@@ -5,7 +5,7 @@
 ![PandoraNext](https://img.shields.io/badge/Nginx-PandoraNext-blue)
 ![docker](https://img.shields.io/badge/docker--compose-8A2BE2)
 
-🚀 紧跟[PandoraNext](https://github.com/pandora-next/deploy)项目迭代，当前0.3.1
+🚀 紧跟[PandoraNext](https://github.com/pandora-next/deploy)项目迭代，当前0.4.1
 
 😀 小白放心食用
 
