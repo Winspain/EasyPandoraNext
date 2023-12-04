@@ -23,5 +23,6 @@ services:
       - "8181:8181"
     volumes:
       - ./data:/data
+      - ./sessions:/root/.cache/PandoraNext
     environment:
       - TZ=Asia/Shanghai
