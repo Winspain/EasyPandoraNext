@@ -12,6 +12,7 @@
 - 使用docker-compose
 - 快速部署Nginx+PandoraNext
 - 挂载宿主机data目录
+- 映射sessions目录，保留登录的session，避免重启容器登录状态丢失
 
 ## Installation
 
