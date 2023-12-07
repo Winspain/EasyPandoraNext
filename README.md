@@ -32,7 +32,7 @@ git clone https://github.com/Winspain/Next-Web-Pandora.git
 1️⃣ 配置data目录下文件
 
 - (必做) 获取[license_id](https://dash.pandoranext.com/)填写在data/config.json的license_id中
-- (可选) 建议在/data/config.json文件中设置site_password以初步保护网站
+- (可选) 建议在/data/config.json文件中设置site_password（需包含字母和数字）以初步保护网站
 
 🍉 其余选项均为可选，按需配置，不配置也可直接启动使用！
 
