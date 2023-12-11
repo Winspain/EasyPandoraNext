@@ -5,11 +5,10 @@
 ![PandoraNext](https://img.shields.io/badge/Nginx-PandoraNext-blue)
 ![docker](https://img.shields.io/badge/docker--compose-8A2BE2)
 
-🚀 紧跟[PandoraNext](https://github.com/pandora-next/deploy)项目迭代，当前0.4.7
+🚀 紧跟[PandoraNext](https://github.com/pandora-next/deploy)项目迭代，当前0.5.0
 
-- 0.4.7更新内容
-- Added new endpoint /api/setup/reload for reloading the service.
-- Tokens can now be stored in a SQLite database for enhanced management.
+- 0.5.0更新内容
+- Users can now register for ChatGPT accounts using PandoraNext!
 
 😀 小白放心食用
 
