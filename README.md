@@ -5,10 +5,12 @@
 ![PandoraNext](https://img.shields.io/badge/Nginx-PandoraNext-blue)
 ![docker](https://img.shields.io/badge/docker--compose-8A2BE2)
 
-🚀 紧跟[PandoraNext](https://github.com/pandora-next/deploy)项目迭代，当前0.5.0
+🚀 紧跟[PandoraNext](https://github.com/pandora-next/deploy)项目迭代，当前0.5.1
 
-- 0.5.0更新内容
-- Users can now register for ChatGPT accounts using PandoraNext!
+- 0.5.1更新内容
+- Introduced a new switch disable_signup to enable or disable the signup.
+- Added two new control switches for improved management in proxy mode.
+- Introduced several user-friendly UI interfaces for easier use in proxy mode.
 
 😀 小白放心食用
 
