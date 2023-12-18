@@ -5,10 +5,12 @@
 ![PandoraNext](https://img.shields.io/badge/Nginx-PandoraNext-blue)
 ![docker](https://img.shields.io/badge/docker--compose-8A2BE2)
 
-🚀 紧跟[PandoraNext](https://github.com/pandora-next/deploy)项目迭代，当前0.5.3
+🚀 紧跟[PandoraNext](https://github.com/pandora-next/deploy)项目迭代，当前v0.6.0
 
-- 0.5.3更新内容
-- Addressed various minor issues.
+- v0.6.0更新内容
+- Now the proxy mode has exposed more interfaces, such as:
+- /api/auth/platform/refresh POST
+- /api/auth/platform/login POST (1:100)
 
 😀 小白放心食用
 
