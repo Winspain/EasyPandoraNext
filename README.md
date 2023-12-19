@@ -57,7 +57,7 @@ docker-compose up -d
 
 ## 相关文档
 
-[更多使用指南](https://fakeopen.org/PandoraNext/)
+[文档站](https://docs.pandoranext.com/)
 
 欢迎issue提问
 
