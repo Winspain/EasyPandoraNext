@@ -61,7 +61,10 @@ docker-compose up -d
 
 欢迎issue提问
 
-### TODO
+## Thanks
 
-- [ ] 使用watchtower监控pandora版本变化
-- [ ] 版本变化时，使用钉钉通知
+Thanks JetBrains for the free open source license
+
+<a href="https://www.jetbrains.com/?from=gev" target="_blank">
+	<img src="https://i.loli.net/2021/02/08/2aejB8rwNmQR7FG.png" width = "260" align=center />
+</a>
