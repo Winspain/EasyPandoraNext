@@ -60,6 +60,9 @@ docker-compose up -d
 
 欢迎issue提问
 
+## ToDo
+- [ ] 引入pandora-next-helper项目管理token
+
 ## Thanks
 
 Thanks JetBrains for the free open source license
